@@ -265,11 +265,14 @@ UsedLibraryUrn="urn:adsk.eagle:library:196"
 UsedLibraryUrn="urn:adsk.eagle:library:197"
 UsedLibraryUrn="urn:adsk.eagle:library:198"
 UsedLibraryUrn="urn:adsk.eagle:library:199"
+UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_board.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_caps.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_com_symbols.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_connector.lbr"
+UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_diode.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_ic.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_induc.lbr"
+UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_power.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_res.lbr"
 
 [Win_1]
@@ -277,5 +280,5 @@ Type="Control Panel"
 Number=0
 
 [Desktop]
-Screen="2960 1050"
+Screen="1280 800"
 Window="Win_1"
