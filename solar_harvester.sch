@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1019,6 +1019,76 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="vrlib_transistor">
+<packages>
+<package name="SO-8">
+<wire x1="-2.425" y1="1.925" x2="2.425" y2="1.925" width="0.127" layer="21"/>
+<wire x1="2.425" y1="1.925" x2="2.425" y2="-1.925" width="0.127" layer="21"/>
+<wire x1="2.425" y1="-1.925" x2="-2.425" y2="-1.925" width="0.127" layer="21"/>
+<wire x1="-2.425" y1="-1.925" x2="-2.425" y2="1.925" width="0.127" layer="21"/>
+<smd name="1" x="-1.905" y="-2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="-0.635" y="-2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="3" x="0.635" y="-2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="4" x="1.905" y="-2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="5" x="1.905" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="6" x="0.635" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="7" x="-0.635" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="8" x="-1.905" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<circle x="-2.8" y="-2.2" radius="0.1" width="0.2" layer="51"/>
+<text x="-2.667" y="3.937" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.794" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="PMOS_DUAL">
+<wire x1="-7.62" y1="12.7" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-12.7" x2="7.62" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-12.7" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<wire x1="7.62" y1="12.7" x2="-7.62" y2="12.7" width="0.254" layer="94"/>
+<pin name="G1" x="-10.16" y="2.54" length="short"/>
+<pin name="G2" x="-10.16" y="-2.54" length="short"/>
+<pin name="D1@1" x="10.16" y="10.16" length="short" rot="R180"/>
+<pin name="D2@2" x="10.16" y="-10.16" length="short" rot="R180"/>
+<pin name="S1" x="10.16" y="2.54" length="short" rot="R180"/>
+<pin name="S2" x="10.16" y="-2.54" length="short" rot="R180"/>
+<pin name="D2@1" x="10.16" y="-7.62" length="short" rot="R180"/>
+<pin name="D1@2" x="10.16" y="7.62" length="short" rot="R180"/>
+<text x="-7.366" y="13.208" size="1.27" layer="95">&gt;NAME</text>
+<text x="-7.366" y="-14.478" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DMP3085LSD">
+<description>&lt;h2&gt;DMP3085LSD&lt;/h2&gt;
+&lt;p&gt;P-CHANNEL ENHANCEMENT MODE MOSFET&lt;/p&gt;
+&lt;br&gt;
+&lt;a href="https://www.mouser.es/datasheet/2/115/DMP3085LSD-266246.pdf"&gt;Datasheet&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="PMOS_DUAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SO-8">
+<connects>
+<connect gate="G$1" pin="D1@1" pad="8"/>
+<connect gate="G$1" pin="D1@2" pad="7"/>
+<connect gate="G$1" pin="D2@1" pad="6"/>
+<connect gate="G$1" pin="D2@2" pad="5"/>
+<connect gate="G$1" pin="G1" pad="2"/>
+<connect gate="G$1" pin="G2" pad="4"/>
+<connect gate="G$1" pin="S1" pad="1"/>
+<connect gate="G$1" pin="S2" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MOUNT" value="SMD" constant="no"/>
+<attribute name="PACKAGE" value="SO-8" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1096,6 +1166,11 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 <part name="U$31" library="vrlib_com_symbols" deviceset="VCC" device=""/>
 <part name="U$23" library="vrlib_com_symbols" deviceset="VCC" device=""/>
 <part name="U$30" library="vrlib_com_symbols" deviceset="VCC" device=""/>
+<part name="U6" library="vrlib_transistor" deviceset="DMP3085LSD" device=""/>
+<part name="U$5" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
+<part name="U$32" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
+<part name="U$33" library="vrlib_com_symbols" deviceset="VCC" device=""/>
+<part name="U$34" library="vrlib_com_symbols" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1254,6 +1329,7 @@ Architecture) Research Group</text>
 <attribute name="VALUE" x="57.128" y="149.542" size="1.27" layer="96" rot="R180"/>
 </instance>
 <instance part="U$31" gate="G$1" x="187.278" y="157.48" smashed="yes"/>
+<instance part="U$5" gate="G$1" x="119.634" y="119.38" smashed="yes" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -1541,6 +1617,31 @@ Architecture) Research Group</text>
 </net>
 <net name="VCC" class="0">
 <segment>
+<pinref part="L2" gate="G$1" pin="1"/>
+<pinref part="L3" gate="G$1" pin="1"/>
+<wire x1="187.38" y1="150.2" x2="187.38" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="187.38" y1="101.6" x2="187.96" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="187.38" y1="150.2" x2="187.38" y2="157.48" width="0.1524" layer="91"/>
+<junction x="187.38" y="150.2"/>
+<label x="184.712" y="163.02" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="I2C_SCL" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="1"/>
+<wire x1="223.52" y1="48.26" x2="213.36" y2="48.26" width="0.1524" layer="91"/>
+<label x="199" y="47.46" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="!VB_SEC_ON!" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="!VB_SEC_ON!"/>
+<wire x1="114.3" y1="119.38" x2="119.38" y2="119.38" width="0.1524" layer="91"/>
+<label x="122.428" y="118.618" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VCC_P" class="0">
+<segment>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="45.224" y1="154.78" x2="43.18" y2="154.78" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="154.78" x2="43.18" y2="157.48" width="0.1524" layer="91"/>
@@ -1560,22 +1661,6 @@ Architecture) Research Group</text>
 <junction x="59.16" y="154.622"/>
 <junction x="63.5" y="154.94"/>
 </segment>
-<segment>
-<pinref part="L2" gate="G$1" pin="1"/>
-<pinref part="L3" gate="G$1" pin="1"/>
-<wire x1="187.38" y1="150.2" x2="187.38" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="187.38" y1="101.6" x2="187.96" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="187.38" y1="150.2" x2="187.38" y2="157.48" width="0.1524" layer="91"/>
-<junction x="187.38" y="150.2"/>
-<label x="184.712" y="163.02" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="I2C_SCL" class="0">
-<segment>
-<pinref part="JP1" gate="A" pin="1"/>
-<wire x1="223.52" y1="48.26" x2="213.36" y2="48.26" width="0.1524" layer="91"/>
-<label x="199" y="47.46" size="1.778" layer="95"/>
-</segment>
 </net>
 </nets>
 </sheet>
@@ -1594,6 +1679,11 @@ Architecture) Research Group</text>
 HPCA (High Performance Computer
 Architecture) Research Group</text>
 <text x="217.4" y="10.6" size="1.778" layer="97">Vladislav Rykov</text>
+<wire x1="247.8" y1="92" x2="247.8" y2="38" width="0.1524" layer="97"/>
+<wire x1="247.8" y1="38" x2="156" y2="38" width="0.1524" layer="97"/>
+<wire x1="156" y1="38" x2="156" y2="92" width="0.1524" layer="97"/>
+<wire x1="156" y1="92" x2="247.8" y2="92" width="0.1524" layer="97"/>
+<text x="156" y="93" size="1.778" layer="97">UNDER VOLTAGE PROTECTION</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes">
@@ -1642,6 +1732,13 @@ Architecture) Research Group</text>
 <instance part="U$22" gate="G$1" x="154.578" y="149.234" smashed="yes"/>
 <instance part="U$23" gate="G$1" x="75.518" y="156.718" smashed="yes"/>
 <instance part="U$30" gate="G$1" x="172.292" y="149.352" smashed="yes"/>
+<instance part="U6" gate="G$1" x="199.58" y="60.96" smashed="yes">
+<attribute name="NAME" x="192.214" y="74.168" size="1.27" layer="95"/>
+<attribute name="VALUE" x="192.214" y="46.482" size="1.27" layer="96"/>
+</instance>
+<instance part="U$32" gate="G$1" x="182.308" y="60.96" smashed="yes" rot="R270"/>
+<instance part="U$33" gate="G$1" x="219.726" y="76.454" smashed="yes"/>
+<instance part="U$34" gate="G$1" x="229.886" y="76.454" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -1684,6 +1781,18 @@ Architecture) Research Group</text>
 <wire x1="75.584" y1="156.718" x2="75.438" y2="156.718" width="0.1524" layer="91"/>
 <junction x="75.584" y="153.282"/>
 <label x="76.962" y="160.528" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U6" gate="G$1" pin="D1@1"/>
+<wire x1="209.74" y1="71.12" x2="212.28" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="212.28" y1="71.12" x2="212.28" y2="69.85" width="0.1524" layer="91"/>
+<pinref part="U6" gate="G$1" pin="D1@2"/>
+<wire x1="212.28" y1="69.85" x2="212.28" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="212.28" y1="68.58" x2="209.74" y2="68.58" width="0.1524" layer="91"/>
+<junction x="212.28" y="69.85"/>
+<label x="217.36" y="82.55" size="1.778" layer="95"/>
+<wire x1="212.28" y1="69.85" x2="219.9" y2="69.85" width="0.1524" layer="91"/>
+<wire x1="219.9" y1="69.85" x2="219.9" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="I2C_SDA" class="0">
@@ -1799,6 +1908,40 @@ Architecture) Research Group</text>
 <net name="N$12" class="0">
 <segment>
 <wire x1="32.658" y1="156.718" x2="32.766" y2="156.718" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VCC_P" class="0">
+<segment>
+<pinref part="U6" gate="G$1" pin="D2@1"/>
+<wire x1="209.74" y1="53.34" x2="212.28" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="U6" gate="G$1" pin="D2@2"/>
+<wire x1="212.28" y1="53.34" x2="212.28" y2="52.07" width="0.1524" layer="91"/>
+<wire x1="212.28" y1="52.07" x2="212.28" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="212.28" y1="50.8" x2="209.74" y2="50.8" width="0.1524" layer="91"/>
+<junction x="212.28" y="52.07"/>
+<label x="227.52" y="82.55" size="1.778" layer="95"/>
+<wire x1="212.28" y1="52.07" x2="230.06" y2="52.07" width="0.1524" layer="91"/>
+<wire x1="230.06" y1="52.07" x2="230.06" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U6" gate="G$1" pin="S2"/>
+<wire x1="209.74" y1="58.42" x2="212.28" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="212.28" y1="58.42" x2="212.28" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="U6" gate="G$1" pin="S1"/>
+<wire x1="212.28" y1="63.5" x2="209.74" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="!VB_SEC_ON!" class="0">
+<segment>
+<pinref part="U6" gate="G$1" pin="G1"/>
+<pinref part="U6" gate="G$1" pin="G2"/>
+<wire x1="189.42" y1="63.5" x2="189.42" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="189.42" y1="60.96" x2="189.42" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="189.42" y1="60.96" x2="184.34" y2="60.96" width="0.1524" layer="91"/>
+<junction x="189.42" y="60.96"/>
+<label x="166.56" y="59.944" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
