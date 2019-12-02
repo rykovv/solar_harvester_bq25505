@@ -798,14 +798,12 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 <library name="vrlib_board">
 <packages>
 <package name="SOLAR_HARVESTER_M1_FOOTPRINT">
-<wire x1="-17.78" y1="23" x2="17.78" y2="23" width="0.127" layer="20"/>
-<wire x1="17.78" y1="23" x2="17.78" y2="-23" width="0.127" layer="20"/>
-<wire x1="17.78" y1="-23" x2="-17.78" y2="-23" width="0.127" layer="20"/>
-<wire x1="-17.78" y1="-23" x2="-17.78" y2="23" width="0.127" layer="20"/>
-<hole x="-15" y="20" drill="4"/>
-<hole x="-15" y="-20" drill="4"/>
-<hole x="15" y="-20" drill="4"/>
-<hole x="15" y="20" drill="4"/>
+<wire x1="-12.7" y1="23" x2="12.7" y2="23" width="0.127" layer="20"/>
+<wire x1="12.7" y1="23" x2="12.7" y2="-23" width="0.127" layer="20"/>
+<wire x1="12.7" y1="-23" x2="-12.7" y2="-23" width="0.127" layer="20"/>
+<wire x1="-12.7" y1="-23" x2="-12.7" y2="23" width="0.127" layer="20"/>
+<hole x="0.09" y="20.658" drill="3"/>
+<hole x="0.09" y="-20.742" drill="3"/>
 </package>
 </packages>
 <symbols>
