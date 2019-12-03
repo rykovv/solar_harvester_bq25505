@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -175,6 +175,8 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-1.3" y1="1.2" x2="-1.3" y2="-1.2" width="0.127" layer="51"/>
 <wire x1="-1.3" y1="-1.2" x2="-1.1" y2="-1.2" width="0.127" layer="51"/>
 <circle x="-1.6" y="-1.4" radius="0.06" width="0.127" layer="51"/>
+<text x="-2.54" y="2.159" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.302" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="INA226_FOOTPRINT">
 <smd name="1" x="-1" y="-2.2" dx="1.45" dy="0.3" layer="1" roundness="10" rot="R90"/>
@@ -414,55 +416,60 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 <library name="vrlib_induc">
 <packages>
 <package name="FIXED_4040_FOOTPRINT">
-<smd name="1" x="0" y="-1.275" dx="3.6" dy="1.5" layer="1"/>
-<smd name="2" x="0" y="1.275" dx="3.6" dy="1.5" layer="1"/>
-<wire x1="-1.9" y1="1.6" x2="-2.1" y2="1.4" width="0.127" layer="51"/>
-<wire x1="-2.1" y1="1.4" x2="-2.1" y2="-1.5" width="0.127" layer="51"/>
-<wire x1="-2.1" y1="-1.5" x2="-1.9" y2="-1.7" width="0.127" layer="51"/>
-<wire x1="1.9" y1="-1.7" x2="2.1" y2="-1.5" width="0.127" layer="51"/>
-<wire x1="2.1" y1="-1.5" x2="2.1" y2="1.4" width="0.127" layer="51"/>
-<wire x1="2.1" y1="1.4" x2="1.9" y2="1.6" width="0.127" layer="51"/>
+<smd name="1" x="0" y="-1.525" dx="3.6" dy="1.5" layer="1"/>
+<smd name="2" x="0" y="1.525" dx="3.6" dy="1.5" layer="1"/>
 <text x="-1.778" y="2.286" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.778" y="-2.54" size="0.4064" layer="27">&gt;VALUE</text>
-<wire x1="-2" y1="0.4" x2="2" y2="0.4" width="0.127" layer="21"/>
-<wire x1="-2.1" y1="0.2" x2="2" y2="0.2" width="0.127" layer="21"/>
-<wire x1="-2" y1="-0.4" x2="2.1" y2="-0.4" width="0.127" layer="21"/>
-<wire x1="-2.1" y1="-0.2" x2="2.1" y2="-0.2" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="2" x2="1.8" y2="2" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="-2" x2="1.8" y2="-2" width="0.127" layer="21"/>
+<wire x1="-2" y1="-1.8" x2="-2" y2="1.8" width="0.127" layer="21"/>
+<wire x1="2" y1="-1.8" x2="2" y2="1.8" width="0.127" layer="21"/>
+<wire x1="1.8" y1="2" x2="2" y2="1.8" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="2" x2="-2" y2="1.8" width="0.127" layer="21"/>
+<wire x1="1.8" y1="-2" x2="2" y2="-1.8" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="-2" x2="-2" y2="-1.8" width="0.127" layer="21"/>
+<wire x1="0" y1="0.1" x2="0.3" y2="0" width="0.127" layer="21" curve="-180"/>
+<wire x1="0.3" y1="0" x2="0.1" y2="0.4" width="0.127" layer="21" curve="-250.346176"/>
+<wire x1="0.1" y1="0.4" x2="0.5" y2="0" width="0.127" layer="21" curve="-90"/>
+<wire x1="0.5" y1="0" x2="-0.4" y2="0.2" width="0.127" layer="21" curve="-180"/>
+<wire x1="-0.4" y1="0.2" x2="0.7" y2="-0.2" width="0.127" layer="21" curve="-180"/>
+<wire x1="0.7" y1="-0.2" x2="-0.4" y2="0.6" width="0.127" layer="21" curve="-203.237647"/>
 </package>
 <package name="FIXED_5050_FOOTPRINT">
-<smd name="1" x="0" y="1.8" dx="4.8" dy="1.6" layer="1" thermals="no"/>
-<smd name="2" x="0" y="-1.8" dx="4.8" dy="1.6" layer="1"/>
-<wire x1="-2.4" y1="2.2" x2="-3" y2="1.6" width="0.127" layer="51"/>
-<wire x1="-2.4" y1="-2.2" x2="-3" y2="-1.6" width="0.127" layer="51"/>
-<wire x1="-3" y1="-1.6" x2="-3" y2="-0.6" width="0.127" layer="51"/>
-<wire x1="-3" y1="-0.6" x2="-3" y2="0.6" width="0.127" layer="51"/>
-<wire x1="-3" y1="0.6" x2="-3" y2="0.8" width="0.127" layer="51"/>
-<wire x1="-3" y1="0.8" x2="-3" y2="1.6" width="0.127" layer="51"/>
-<wire x1="2.4" y1="2.2" x2="3" y2="1.6" width="0.127" layer="51"/>
-<wire x1="3" y1="1.6" x2="3" y2="0.8" width="0.127" layer="51"/>
-<wire x1="3" y1="0.8" x2="3" y2="0.6" width="0.127" layer="51"/>
-<wire x1="3" y1="0.6" x2="3" y2="-0.6" width="0.127" layer="51"/>
-<wire x1="3" y1="-0.6" x2="3" y2="-0.8" width="0.127" layer="51"/>
-<wire x1="3" y1="-0.8" x2="3" y2="-1.7" width="0.127" layer="51"/>
-<wire x1="3" y1="-1.7" x2="2.4" y2="-2.3" width="0.127" layer="51"/>
-<wire x1="-3" y1="0.8" x2="3" y2="0.8" width="0.127" layer="51"/>
-<wire x1="-3" y1="0.6" x2="3" y2="0.6" width="0.127" layer="51"/>
-<wire x1="-2.9" y1="-0.8" x2="3" y2="-0.8" width="0.127" layer="51"/>
-<wire x1="-3" y1="-0.6" x2="3" y2="-0.6" width="0.127" layer="51"/>
+<smd name="1" x="0" y="1.8" dx="4.8" dy="1.8" layer="1" thermals="no"/>
+<smd name="2" x="0" y="-1.8" dx="4.8" dy="1.8" layer="1"/>
 <text x="-2.286" y="2.794" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-2.413" y="-3.175" size="0.4064" layer="27">&gt;VALUE</text>
+<wire x1="-2.2" y1="2.5" x2="2.2" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-2.2" y1="-2.5" x2="2.2" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="-2.2" x2="-2.5" y2="2.2" width="0.127" layer="21"/>
+<wire x1="2.5" y1="-2.2" x2="2.5" y2="2.2" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="2.2" x2="-2.2" y2="2.5" width="0.127" layer="21"/>
+<wire x1="2.2" y1="2.5" x2="2.5" y2="2.2" width="0.127" layer="21"/>
+<wire x1="2.5" y1="-2.2" x2="2.2" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="-2.2" x2="-2.2" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="-0.1" y1="-0.1" x2="0.2" y2="-0.1" width="0.127" layer="21" curve="-180"/>
+<wire x1="0.2" y1="-0.1" x2="-0.3" y2="0" width="0.127" layer="21" curve="-180"/>
+<wire x1="-0.3" y1="0" x2="0.4" y2="-0.2" width="0.127" layer="21" curve="-180"/>
+<wire x1="0.4" y1="-0.2" x2="-0.5" y2="0.1" width="0.127" layer="21" curve="-180"/>
+<wire x1="-0.5" y1="0.1" x2="0.6" y2="-0.3" width="0.127" layer="21" curve="-180"/>
+<wire x1="0.6" y1="-0.3" x2="-0.7" y2="0.2" width="0.127" layer="21" curve="-180"/>
+<wire x1="-0.7" y1="0.2" x2="0.8" y2="-0.4" width="0.127" layer="21" curve="-180"/>
 </package>
 <package name="FIXED_2520_FOOTPRINT">
 <smd name="1" x="0" y="1.05" dx="2.1" dy="0.9" layer="1" thermals="no"/>
 <smd name="2" x="0" y="-1.05" dx="2.1" dy="0.9" layer="1"/>
-<wire x1="-1" y1="0.6" x2="-1" y2="-0.6" width="0.127" layer="51"/>
-<wire x1="1" y1="0.6" x2="1" y2="-0.6" width="0.127" layer="51"/>
-<wire x1="-1" y1="0.5" x2="1" y2="0.5" width="0.0762" layer="21"/>
-<wire x1="-1" y1="0.4" x2="1" y2="0.4" width="0.0762" layer="21"/>
-<wire x1="-1" y1="-0.5" x2="1" y2="-0.5" width="0.0762" layer="21"/>
-<wire x1="-1" y1="-0.4" x2="1" y2="-0.4" width="0.0762" layer="21"/>
 <text x="-1.016" y="1.651" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.143" y="-2.032" size="0.4064" layer="27">&gt;VALUE</text>
+<wire x1="-1" y1="1.25" x2="-1" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="1" y1="1.25" x2="1" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-1" y1="1.25" x2="1" y2="1.25" width="0.127" layer="21"/>
+<wire x1="-1" y1="-1.25" x2="1" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-0.07" y1="-0.06" x2="0.13" y2="-0.06" width="0.127" layer="21" curve="-180"/>
+<wire x1="0.13" y1="-0.06" x2="-0.27" y2="-0.06" width="0.127" layer="21" curve="-180"/>
+<wire x1="-0.27" y1="-0.06" x2="0.33" y2="-0.06" width="0.127" layer="21" curve="-180"/>
+<wire x1="0.33" y1="-0.06" x2="-0.47" y2="-0.06" width="0.127" layer="21" curve="-180"/>
+<wire x1="-0.47" y1="-0.06" x2="0.53" y2="-0.06" width="0.127" layer="21" curve="-180"/>
 </package>
 </packages>
 <symbols>
@@ -558,20 +565,20 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 <wire x1="-0.17" y1="-0.02" x2="0.17" y2="-0.02" width="0.02" layer="21"/>
 </package>
 <package name="1608_FOOTPRINT">
-<smd name="1" x="0" y="0.75" dx="0.9" dy="0.6" layer="1"/>
+<smd name="1" x="0" y="0.75" dx="0.9" dy="0.6" layer="1" thermals="no"/>
 <text x="-0.64" y="1.25" size="0.3048" layer="25">&gt;NAME</text>
 <text x="-0.72" y="-1.53" size="0.3048" layer="27">&gt;VALUE</text>
-<smd name="2" x="0" y="-0.75" dx="0.9" dy="0.6" layer="1"/>
-<wire x1="-0.46" y1="0.8" x2="-0.5" y2="0.8" width="0.03" layer="21"/>
-<wire x1="-0.5" y1="0.8" x2="-0.5" y2="-0.8" width="0.03" layer="21"/>
-<wire x1="-0.5" y1="-0.8" x2="-0.46" y2="-0.8" width="0.03" layer="21"/>
-<wire x1="0.46" y1="0.8" x2="0.5" y2="0.8" width="0.03" layer="21"/>
-<wire x1="0.5" y1="0.8" x2="0.5" y2="0.03" width="0.03" layer="21"/>
-<wire x1="0.5" y1="0.03" x2="0.5" y2="-0.03" width="0.03" layer="21"/>
-<wire x1="0.5" y1="-0.03" x2="0.5" y2="-0.8" width="0.03" layer="21"/>
-<wire x1="0.5" y1="-0.8" x2="0.46" y2="-0.8" width="0.03" layer="21"/>
-<wire x1="-0.49" y1="0.03" x2="0.5" y2="0.03" width="0.03" layer="21"/>
-<wire x1="-0.49" y1="-0.03" x2="0.5" y2="-0.03" width="0.03" layer="21"/>
+<smd name="2" x="0" y="-0.75" dx="0.9" dy="0.6" layer="1" thermals="no"/>
+<wire x1="-0.4" y1="0.8" x2="-0.4" y2="0.1" width="0.127" layer="21"/>
+<wire x1="-0.4" y1="0.1" x2="-0.4" y2="-0.1" width="0.127" layer="21"/>
+<wire x1="-0.4" y1="-0.1" x2="-0.4" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="0.4" y1="0.8" x2="0.4" y2="0.1" width="0.127" layer="21"/>
+<wire x1="0.4" y1="0.1" x2="0.4" y2="-0.1" width="0.127" layer="21"/>
+<wire x1="0.4" y1="-0.1" x2="0.4" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="-0.4" y1="0.8" x2="0.4" y2="0.8" width="0.127" layer="21"/>
+<wire x1="-0.4" y1="-0.8" x2="0.4" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="-0.4" y1="-0.1" x2="0.4" y2="-0.1" width="0.127" layer="21"/>
+<wire x1="-0.4" y1="0.1" x2="0.4" y2="0.1" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -747,19 +754,17 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 <smd name="2" x="0" y="-0.3" dx="0.37" dy="0.17" layer="1" thermals="no"/>
 <text x="-0.49" y="0.49" size="0.254" layer="25">&gt;NAME</text>
 <text x="-0.63" y="-0.73" size="0.254" layer="27">&gt;VALUE</text>
-<wire x1="-0.18" y1="0.21" x2="-0.18" y2="0.17" width="0.02" layer="21"/>
-<wire x1="-0.18" y1="0.17" x2="-0.18" y2="-0.17" width="0.02" layer="21"/>
-<wire x1="-0.18" y1="-0.17" x2="-0.18" y2="-0.2" width="0.02" layer="21"/>
-<wire x1="-0.18" y1="-0.2" x2="-0.18" y2="-0.21" width="0.02" layer="21"/>
-<wire x1="0.18" y1="0.21" x2="0.18" y2="0.2" width="0.02" layer="21"/>
-<wire x1="0.18" y1="0.2" x2="0.18" y2="0.17" width="0.02" layer="21"/>
-<wire x1="0.18" y1="0.17" x2="0.18" y2="-0.17" width="0.02" layer="21"/>
-<wire x1="0.18" y1="-0.17" x2="0.18" y2="-0.2" width="0.02" layer="21"/>
-<wire x1="0.18" y1="-0.2" x2="0.18" y2="-0.21" width="0.02" layer="21"/>
-<wire x1="-0.17" y1="0.2" x2="0.18" y2="0.2" width="0.02" layer="21"/>
-<wire x1="-0.18" y1="0.17" x2="0.18" y2="0.17" width="0.02" layer="21"/>
-<wire x1="-0.18" y1="-0.2" x2="0.18" y2="-0.2" width="0.02" layer="21"/>
-<wire x1="-0.18" y1="-0.17" x2="0.18" y2="-0.17" width="0.02" layer="21"/>
+<wire x1="-0.15" y1="0.3" x2="-0.15" y2="0.15" width="0.0762" layer="21"/>
+<wire x1="-0.15" y1="0.15" x2="-0.15" y2="-0.3" width="0.0762" layer="21"/>
+<wire x1="0.15" y1="0.3" x2="0.15" y2="0.15" width="0.0762" layer="21"/>
+<wire x1="0.15" y1="0.15" x2="0.15" y2="-0.3" width="0.0762" layer="21"/>
+<wire x1="-0.15" y1="0.3" x2="0.15" y2="0.3" width="0.0762" layer="21"/>
+<wire x1="-0.15" y1="-0.3" x2="0.15" y2="-0.3" width="0.0762" layer="21"/>
+<wire x1="-0.15" y1="0.15" x2="0" y2="0.15" width="0.0762" layer="21"/>
+<wire x1="0" y1="0.15" x2="0.15" y2="0.15" width="0.0762" layer="21"/>
+<wire x1="-0.15" y1="-0.15" x2="0" y2="-0.15" width="0.0762" layer="21"/>
+<wire x1="0" y1="-0.15" x2="0.15" y2="-0.15" width="0.0762" layer="21"/>
+<wire x1="0" y1="-0.15" x2="0" y2="0.15" width="0.0762" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -802,8 +807,8 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 <wire x1="12.7" y1="23" x2="12.7" y2="-23" width="0.127" layer="20"/>
 <wire x1="12.7" y1="-23" x2="-12.7" y2="-23" width="0.127" layer="20"/>
 <wire x1="-12.7" y1="-23" x2="-12.7" y2="23" width="0.127" layer="20"/>
-<hole x="0.09" y="20.658" drill="3"/>
-<hole x="0.09" y="-20.742" drill="3"/>
+<hole x="0" y="20.658" drill="3"/>
+<hole x="0" y="-20.742" drill="3"/>
 </package>
 </packages>
 <symbols>

@@ -274,6 +274,7 @@ UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_ic
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_induc.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_power.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_res.lbr"
+UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_transistor.lbr"
 
 [Win_1]
 Type="Control Panel"
