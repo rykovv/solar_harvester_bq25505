@@ -272,7 +272,9 @@ UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_co
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_diode.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_ic.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_induc.lbr"
+UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_jumper.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_power.lbr"
+UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_prod.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_res.lbr"
 UsedLibrary="D:/std_folders/OneDrive/Документы/EAGLE/libraries/vrlib_transistor.lbr"
 
@@ -281,5 +283,5 @@ Type="Control Panel"
 Number=0
 
 [Desktop]
-Screen="2560 1024"
+Screen="2960 1050"
 Window="Win_1"
