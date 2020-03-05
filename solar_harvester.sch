@@ -109,7 +109,7 @@ DIN A4, landscape with location and doc. field</description>
 <packages>
 <package name="TPS61322XA_FOOTPRINT">
 <smd name="1" x="-0.95" y="-1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90"/>
-<smd name="2" x="0" y="-1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90"/>
+<smd name="2" x="0" y="-1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90" thermals="no"/>
 <smd name="3" x="0.95" y="-1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90"/>
 <smd name="4" x="0.95" y="1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90"/>
 <smd name="5" x="-0.95" y="1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90"/>
