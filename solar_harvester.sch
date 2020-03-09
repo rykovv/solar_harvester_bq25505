@@ -2499,9 +2499,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U$11" library="vrlib_com_symbols" deviceset="VCC" device=""/>
 <part name="R1" library="vrlib_res" deviceset="RESISTOR_1608" device="" value="7.32M"/>
 <part name="R2" library="vrlib_res" deviceset="RESISTOR_1608" device="" value="5.62M"/>
-<part name="R3" library="vrlib_res" deviceset="RESISTOR_1608" device="" value="7.32M"/>
-<part name="R4" library="vrlib_res" deviceset="RESISTOR_1608" device="" value="7.32M"/>
-<part name="R5" library="vrlib_res" deviceset="RESISTOR_1608" device="" value="7.32M"/>
+<part name="R3" library="vrlib_res" deviceset="RESISTOR_1608" device="" value="1.2M"/>
+<part name="R4" library="vrlib_res" deviceset="RESISTOR_1608" device="" value="7.5M"/>
+<part name="R5" library="vrlib_res" deviceset="RESISTOR_1608" device="" value="4.3M"/>
 <part name="U$17" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
 <part name="L2" library="vrlib_induc" deviceset="FIXED_5050" device="" value="4u7"/>
 <part name="U$14" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
@@ -2594,6 +2594,8 @@ Architecture) Research Group</text>
 <wire x1="116.84" y1="27.94" x2="116.84" y2="66.04" width="0.1524" layer="97"/>
 <wire x1="116.84" y1="66.04" x2="177.8" y2="66.04" width="0.1524" layer="97"/>
 <text x="118" y="67" size="1.778" layer="97">POWER OUTPUT</text>
+<text x="30.48" y="109.22" size="1.778" layer="97" rot="R90">Over-voltage</text>
+<text x="43.18" y="101.6" size="1.778" layer="97" rot="R90">MPPT</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
