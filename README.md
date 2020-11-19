@@ -2,6 +2,20 @@
 
 Solar harvesting power supply board based on TI BQ25505 PMIC with MPPT functionality configured for tracking 80% of the PV input. The board provides voltage/current measurement IC (INA226) intended for measurement of the PV input and a fuel gauge system based on MAX17040 IC to check and monitor battery state.
 
+## Table of Contents ##
+
+[[_TOC_]]
+
+## Rev1 manufactured and assembled
+
+![rev1_man_assem.png](/img/rev1_man_assem.jpg)
+
+## Rev2 simulated
+
+![rev2_top.png](/img/rev2_top.png)
+
+![rev2_bottom.png](/img/rev2_bottom.png)
+
 ## Detailed Overview
 
 The BQ25505 was created for special needs of ultra low power applications. Therefore, it is designed for extract uW and mW of power generated from multiple energy harvesting sources. The board configuration suits only for solar power applications.
@@ -63,6 +77,18 @@ and
 
 ## Issues
 
-Despite all values of resistors R~ok1-3~ and R~ov1,2~ were correctly calculated (see 3.7V 860mAh Li-po battery and Battery over-voltage, under-voltage and operating range section) BQ25505 does not behave as expected and presents serious instabilities incompatible with deployment in real applications. When the battery is fully charged and attached, on one hand, and there is enough PV power input to start the circuitry, on the other hand, the BQ25505 starts working as expected until the battery is discharged (voltage below VBAT_OK). When the battery is half-discharged (voltage about VBAT_OK_HYST), and independently of the PV power input, VSTOR is unable to give stable output. What happens is when the 3.3V & 5V voltage regulators reach predefined output levels and the load starts to consume power (especially when the power is greater than 200mA), the BQ25505 switches constantly on and off #VBAT_SEC_ON for a couple of milliseconds. It makes impossible to provide enough power for stable MCU launching.
+Despite all values of resistors R~ok1-3~ and R~ov1,2~ were correctly calculated (see 3.7V 860mAh Li-po battery and Battery over-voltage, under-voltage and operating range section) BQ25505 does not behave as expected and presents serious instabilities incompatible with deployment in real applications. When the battery is fully charged and attached, on one hand, and there is enough PV power input to start the circuitry, on the other hand, the BQ25505 starts working as expected until the battery is discharged (voltage below VBAT_OK). When the battery is half-discharged (voltage about VBAT_OK_HYST), and independently of the PV power input, VSTOR is unable to give stable output. What happens is when the 3.3V & 5V voltage regulators reach predefined output levels and the load starts to consume power (especially when the power is greater than 200mA, perhaps max transitory current in this state is much lower), the BQ25505 switches constantly on and off #VBAT_SEC_ON for a couple of milliseconds. It makes impossible to provide enough power for stable MCU launching.
 
-The solution for this drawback is to substitute the current Under-voltage protection scheme with a battery management IC that would be in charge of over- and under-voltage protection.
+A potential solution for this drawback is to substitute the current Under-voltage protection scheme with a battery management IC that would be in charge of over- and under-voltage protection.
+
+## Revisions
+
+### Rev 0
+### Rev 1
+ - Components with 0603 metric footprint were substituted by 0603 imperial
+### Rev 2
+ - Board size increased to 30x55
+ - Changed C3 footprint to 3528, C4 and C11 to 1608
+ - Changed C9 and C10 to 100u 3528
+ - Rewired PCB
+ - Components font size increased to 32mil

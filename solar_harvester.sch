@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -111,7 +111,7 @@ DIN A4, landscape with location and doc. field</description>
 <smd name="1" x="-0.95" y="-1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90"/>
 <smd name="2" x="0" y="-1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90" thermals="no"/>
 <smd name="3" x="0.95" y="-1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90"/>
-<smd name="4" x="0.95" y="1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90"/>
+<smd name="4" x="0.95" y="1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90" thermals="no"/>
 <smd name="5" x="-0.95" y="1.3" dx="1.17" dy="0.67" layer="1" roundness="15" rot="R90"/>
 <wire x1="-0.4" y1="1.3" x2="0.4" y2="1.3" width="0.127" layer="51"/>
 <wire x1="1.5" y1="1.3" x2="1.7" y2="1.3" width="0.127" layer="51"/>
@@ -547,37 +547,16 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 </library>
 <library name="vrlib_caps">
 <packages>
-<package name="2012_FOOTPRINT">
-<smd name="1" x="0" y="1.1" dx="1.4" dy="0.8" layer="1" thermals="no"/>
-<smd name="2" x="0" y="-1.1" dx="1.4" dy="0.8" layer="1" thermals="no"/>
-<wire x1="-0.6" y1="1" x2="-0.6" y2="0.11" width="0.1016" layer="51"/>
-<wire x1="-0.6" y1="0.11" x2="-0.6" y2="-0.11" width="0.1016" layer="51"/>
-<wire x1="-0.6" y1="-0.11" x2="-0.6" y2="-1" width="0.1016" layer="51"/>
-<wire x1="-0.6" y1="-1" x2="0.6" y2="-1" width="0.1016" layer="51"/>
-<wire x1="0.6" y1="-1" x2="0.6" y2="-0.11" width="0.1016" layer="51"/>
-<wire x1="0.6" y1="-0.11" x2="0.6" y2="0.11" width="0.1016" layer="51"/>
-<wire x1="0.6" y1="0.11" x2="0.6" y2="1" width="0.1016" layer="51"/>
-<wire x1="0.6" y1="1" x2="-0.6" y2="1" width="0.1016" layer="51"/>
-<wire x1="-0.6" y1="0.11" x2="0.6" y2="0.11" width="0.1016" layer="51"/>
-<wire x1="-0.6" y1="-0.11" x2="0.6" y2="-0.11" width="0.1016" layer="51"/>
-<text x="-1.4" y="1.6" size="0.6096" layer="25">&gt;NAME</text>
-<text x="-1.4" y="-2.2" size="0.6096" layer="27">&gt;VALUE</text>
-</package>
-<package name="1005_FOOTPRINT">
-<smd name="1" x="0" y="0.53" dx="0.6" dy="0.4" layer="1" thermals="no"/>
-<wire x1="-0.25" y1="0.5" x2="-0.25" y2="0.1" width="0.1016" layer="51"/>
-<wire x1="-0.25" y1="0.1" x2="-0.25" y2="-0.1" width="0.1016" layer="51"/>
-<wire x1="-0.25" y1="-0.1" x2="-0.25" y2="-0.5" width="0.1016" layer="51"/>
-<wire x1="-0.25" y1="-0.5" x2="0.25" y2="-0.5" width="0.1016" layer="51"/>
-<wire x1="0.25" y1="-0.5" x2="0.25" y2="-0.1" width="0.1016" layer="51"/>
-<wire x1="0.25" y1="-0.1" x2="0.25" y2="0.1" width="0.1016" layer="51"/>
-<wire x1="0.25" y1="0.1" x2="0.25" y2="0.5" width="0.1016" layer="51"/>
-<wire x1="0.25" y1="0.5" x2="-0.25" y2="0.5" width="0.1016" layer="51"/>
-<smd name="2" x="0" y="-0.53" dx="0.6" dy="0.4" layer="1" thermals="no"/>
-<wire x1="-0.25" y1="0.1" x2="0.25" y2="0.1" width="0.1016" layer="51"/>
-<wire x1="-0.25" y1="-0.1" x2="0.25" y2="-0.1" width="0.1016" layer="51"/>
-<text x="-0.69" y="0.79" size="0.3048" layer="25">&gt;NAME</text>
-<text x="-0.79" y="-1.11" size="0.3048" layer="27">&gt;VALUE</text>
+<package name="3528_TAN_FOOTPRINT">
+<wire x1="-1.45" y1="1.8" x2="-1.45" y2="-1.8" width="0.127" layer="51"/>
+<wire x1="1.45" y1="1.8" x2="1.45" y2="-1.8" width="0.127" layer="51"/>
+<wire x1="-1.45" y1="1.8" x2="1.45" y2="1.8" width="0.127" layer="51"/>
+<wire x1="-1.45" y1="-1.8" x2="1.45" y2="-1.8" width="0.127" layer="51"/>
+<smd name="1" x="0" y="1.65" dx="1.3" dy="2.3" layer="1" rot="R90" thermals="no"/>
+<smd name="2" x="0" y="-1.65" dx="1.3" dy="2.3" layer="1" rot="R90" thermals="no"/>
+<rectangle x1="-1.5" y1="0.5" x2="1.5" y2="1.8" layer="51"/>
+<text x="-1.778" y="2.54" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-1.778" y="-3.302" size="0.8128" layer="27">&gt;VALUE</text>
 </package>
 <package name="1608_FOOTPRINT">
 <smd name="1" x="0" y="0.75" dx="1.016" dy="0.762" layer="1" thermals="no"/>
@@ -598,6 +577,26 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 </package>
 </packages>
 <symbols>
+<symbol name="CAP_POL_SYMBOL">
+<wire x1="-1.27" y1="1.016" x2="-1.27" y2="0.254" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0.254" x2="1.27" y2="0.254" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0.254" x2="1.27" y2="1.016" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.016" x2="0" y2="1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="1.016" x2="-1.27" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-0.254" x2="-1.27" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-1.016" x2="1.27" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.016" x2="1.27" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-0.254" x2="-1.27" y2="-0.254" width="0.254" layer="94"/>
+<rectangle x1="-1.27" y1="-1.016" x2="1.27" y2="-0.254" layer="94"/>
+<wire x1="-1.016" y1="1.778" x2="-0.508" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="2.032" x2="-0.762" y2="1.524" width="0.1524" layer="94"/>
+<pin name="1" x="0" y="1.778" visible="off" length="point" rot="R270"/>
+<wire x1="0" y1="1.016" x2="0" y2="1.778" width="0.254" layer="94"/>
+<pin name="2" x="0" y="-1.778" visible="off" length="point" rot="R90"/>
+<wire x1="0" y1="-1.016" x2="0" y2="-1.778" width="0.254" layer="94"/>
+<text x="0.762" y="1.524" size="1.27" layer="95">&gt;NAME</text>
+<text x="0.762" y="-2.54" size="1.27" layer="96">&gt;NAME</text>
+</symbol>
 <symbol name="CAP_GEN_SYMBOL">
 <pin name="2" x="-3.302" y="0" visible="off" length="short"/>
 <pin name="1" x="3.302" y="0" visible="off" length="short" rot="R180"/>
@@ -608,34 +607,21 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="2012_CER">
+<deviceset name="3528_POL_CAP">
 <gates>
-<gate name="G$1" symbol="CAP_GEN_SYMBOL" x="0" y="0"/>
+<gate name="G$1" symbol="CAP_POL_SYMBOL" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="2012_FOOTPRINT">
+<device name="" package="3528_TAN_FOOTPRINT">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="1005_CER">
-<gates>
-<gate name="G$1" symbol="CAP_GEN_SYMBOL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1005_FOOTPRINT">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MOUNT" value="SMD" constant="no"/>
+<attribute name="SIZE_CODE" value="3528" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -729,24 +715,24 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 <package name="CONN_SCREW_TYPE_2P">
 <pad name="1" x="-2.54" y="0" drill="1.2" diameter="2.54" thermals="no"/>
 <pad name="2" x="2.54" y="0" drill="1.2" diameter="2.54" thermals="no"/>
-<wire x1="-5.125" y1="2.45" x2="-5.125" y2="-2.45" width="0.127" layer="21"/>
-<wire x1="-5.125" y1="-2.45" x2="5.125" y2="-2.45" width="0.127" layer="21"/>
-<wire x1="5.125" y1="-2.45" x2="5.125" y2="2.45" width="0.127" layer="21"/>
-<wire x1="5.125" y1="2.45" x2="-5.125" y2="2.45" width="0.127" layer="21"/>
-<wire x1="-3" y1="2.4" x2="-3" y2="2" width="0.127" layer="21"/>
-<wire x1="-3" y1="2" x2="-2" y2="2" width="0.127" layer="21"/>
-<wire x1="-2" y1="2" x2="-2" y2="2.4" width="0.127" layer="21"/>
-<wire x1="2" y1="2.4" x2="2" y2="2" width="0.127" layer="21"/>
-<wire x1="2" y1="2" x2="3" y2="2" width="0.127" layer="21"/>
-<wire x1="3" y1="2" x2="3" y2="2.4" width="0.127" layer="21"/>
-<wire x1="-3.2" y1="2.4" x2="-3.2" y2="1.8" width="0.127" layer="21"/>
-<wire x1="-3.2" y1="1.8" x2="-1.8" y2="1.8" width="0.127" layer="21"/>
-<wire x1="-1.8" y1="1.8" x2="-1.8" y2="2.4" width="0.127" layer="21"/>
-<wire x1="1.8" y1="2.4" x2="1.8" y2="1.8" width="0.127" layer="21"/>
-<wire x1="1.8" y1="1.8" x2="3.2" y2="1.8" width="0.127" layer="21"/>
-<wire x1="3.2" y1="1.8" x2="3.2" y2="2.4" width="0.127" layer="21"/>
-<text x="-4" y="3" size="1.27" layer="25">&gt;NAME</text>
-<text x="-4" y="-4" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-5.125" y1="5" x2="-5.125" y2="-5" width="0.127" layer="21"/>
+<wire x1="-5.125" y1="-5" x2="5.125" y2="-5" width="0.127" layer="21"/>
+<wire x1="5.125" y1="-5" x2="5.125" y2="5" width="0.127" layer="21"/>
+<wire x1="5.125" y1="5" x2="-5.125" y2="5" width="0.127" layer="21"/>
+<wire x1="-3" y1="4.9" x2="-3" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-3" y1="4.5" x2="-2" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-2" y1="4.5" x2="-2" y2="4.9" width="0.127" layer="21"/>
+<wire x1="2" y1="4.9" x2="2" y2="4.5" width="0.127" layer="21"/>
+<wire x1="2" y1="4.5" x2="3" y2="4.5" width="0.127" layer="21"/>
+<wire x1="3" y1="4.5" x2="3" y2="4.9" width="0.127" layer="21"/>
+<wire x1="-3.2" y1="4.9" x2="-3.2" y2="4.3" width="0.127" layer="21"/>
+<wire x1="-3.2" y1="4.3" x2="-1.8" y2="4.3" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="4.3" x2="-1.8" y2="4.9" width="0.127" layer="21"/>
+<wire x1="1.8" y1="4.9" x2="1.8" y2="4.3" width="0.127" layer="21"/>
+<wire x1="1.8" y1="4.3" x2="3.2" y2="4.3" width="0.127" layer="21"/>
+<wire x1="3.2" y1="4.3" x2="3.2" y2="4.9" width="0.127" layer="21"/>
+<text x="-3.2" y="5.2" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.4" y="-6.4" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -876,12 +862,12 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 <library name="vrlib_board">
 <packages>
 <package name="SOLAR_HARVESTER_V1.0_M1_FOOTPRINT">
-<wire x1="-12.7" y1="23" x2="12.7" y2="23" width="0.127" layer="20"/>
-<wire x1="12.7" y1="23" x2="12.7" y2="-23" width="0.127" layer="20"/>
-<wire x1="12.7" y1="-23" x2="-12.7" y2="-23" width="0.127" layer="20"/>
-<wire x1="-12.7" y1="-23" x2="-12.7" y2="23" width="0.127" layer="20"/>
-<hole x="0" y="20.658" drill="3"/>
-<hole x="0" y="-20.742" drill="3"/>
+<wire x1="-15" y1="27" x2="15" y2="27" width="0.127" layer="20"/>
+<wire x1="15" y1="27" x2="15" y2="-27" width="0.127" layer="20"/>
+<wire x1="15" y1="-27" x2="-15" y2="-27" width="0.127" layer="20"/>
+<wire x1="-15" y1="-27" x2="-15" y2="27" width="0.127" layer="20"/>
+<hole x="0" y="24.658" drill="3"/>
+<hole x="0" y="-24.742" drill="3"/>
 </package>
 </packages>
 <symbols>
@@ -1162,8 +1148,8 @@ Bi-Directional Current and Power Monitor with I2C Compatible Interface&lt;/p&gt;
 <smd name="4" x="1.905" y="-2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
 <smd name="5" x="1.905" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
 <smd name="6" x="0.635" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="7" x="-0.635" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="8" x="-1.905" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="7" x="-0.635" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90" thermals="no"/>
+<smd name="8" x="-1.905" y="2.7" dx="1.55" dy="0.6" layer="1" rot="R90" thermals="no"/>
 <circle x="-2.8" y="-2.2" radius="0.1" width="0.2" layer="51"/>
 <text x="-2.667" y="3.937" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.794" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
@@ -2489,11 +2475,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="C1" library="vrlib_caps" deviceset="1608_CAP" device="" value="0.01u"/>
 <part name="C2" library="vrlib_caps" deviceset="1608_CAP" device="" value="4u7"/>
 <part name="U$6" library="vrlib_com_symbols" deviceset="GND" device=""/>
-<part name="C3" library="vrlib_caps" deviceset="2012_CER" device="" value="100u"/>
-<part name="PV_IN" library="vrlib_connector" deviceset="CONN_SCEW_TYPE_2P" device=""/>
+<part name="C3" library="vrlib_caps" deviceset="3528_POL_CAP" device="" value="100u"/>
+<part name="+PV_IN--" library="vrlib_connector" deviceset="CONN_SCEW_TYPE_2P" device=""/>
 <part name="U$8" library="vrlib_com_symbols" deviceset="GND" device=""/>
 <part name="U$9" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
-<part name="BAT_IN" library="vrlib_connector" deviceset="CONN_SCEW_TYPE_2P" device=""/>
+<part name="+BAT_IN--" library="vrlib_connector" deviceset="CONN_SCEW_TYPE_2P" device=""/>
 <part name="U$10" library="vrlib_com_symbols" deviceset="GND" device=""/>
 <part name="C5" library="vrlib_caps" deviceset="1608_CAP" device="" value="0.1u"/>
 <part name="U$11" library="vrlib_com_symbols" deviceset="VCC" device=""/>
@@ -2527,19 +2513,19 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U$16" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
 <part name="C8" library="vrlib_caps" deviceset="1608_CAP" device="" value="0.1u"/>
 <part name="U$22" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
-<part name="C9" library="vrlib_caps" deviceset="1608_CAP" device="" value="22u"/>
-<part name="C10" library="vrlib_caps" deviceset="1608_CAP" device="" value="22u"/>
+<part name="C9" library="vrlib_caps" deviceset="3528_POL_CAP" device="" value="100u"/>
+<part name="C10" library="vrlib_caps" deviceset="3528_POL_CAP" device="" value="100u"/>
 <part name="B1" library="vrlib_board" deviceset="SOLAR_HARVESTER_V1.0_M1_BOARD" device=""/>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="U$7" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
 <part name="U$24" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
 <part name="U$25" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
-<part name="3V3_OUT" library="vrlib_connector" deviceset="CONN_SCEW_TYPE_2P" device=""/>
-<part name="5V_OUT" library="vrlib_connector" deviceset="CONN_SCEW_TYPE_2P" device=""/>
+<part name="--3V3_OUT+" library="vrlib_connector" deviceset="CONN_SCEW_TYPE_2P" device=""/>
+<part name="--5V_OUT+" library="vrlib_connector" deviceset="CONN_SCEW_TYPE_2P" device=""/>
 <part name="U$26" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
 <part name="U$27" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
 <part name="U$28" library="vrlib_com_symbols" deviceset="GND" device=""/>
-<part name="C11" library="vrlib_caps" deviceset="1005_CER" device="" value="10u"/>
+<part name="C11" library="vrlib_caps" deviceset="1608_CAP" device="" value="10u"/>
 <part name="U$29" library="vrlib_com_symbols" deviceset="LOUT" device=""/>
 <part name="C4" library="vrlib_caps" deviceset="1608_CAP" device="" value="4u7"/>
 <part name="U$31" library="vrlib_com_symbols" deviceset="VCC" device=""/>
@@ -2564,6 +2550,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U$37" library="vrlib_com_symbols" deviceset="GND" device=""/>
 <part name="TP4" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP10SQ" package3d_urn="urn:adsk.eagle:package:27962/1"/>
 <part name="D1" library="vrlib_diode" deviceset="SD101BW" device=""/>
+<part name="FID3" library="vrlib_prod" deviceset="FIDUCIAL_25" device=""/>
+<part name="FID4" library="vrlib_prod" deviceset="FIDUCIAL_25" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2626,16 +2614,16 @@ Architecture) Research Group</text>
 <attribute name="VALUE" x="139.446" y="145.542" size="1.27" layer="96" rot="R180"/>
 </instance>
 <instance part="U$6" gate="G$1" x="78.408" y="83.456" smashed="yes"/>
-<instance part="C3" gate="G$1" x="48.006" y="139.7" smashed="yes" rot="R90">
-<attribute name="NAME" x="46.99" y="142.494" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="47.244" y="138.176" size="1.27" layer="96" rot="R180"/>
+<instance part="C3" gate="G$1" x="47.244" y="141.224" smashed="yes">
+<attribute name="NAME" x="50.292" y="145.034" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="51.816" y="138.684" size="1.27" layer="96" rot="R180"/>
 </instance>
-<instance part="PV_IN" gate="G$1" x="167.64" y="144.78" smashed="yes" rot="R270">
+<instance part="+PV_IN--" gate="G$1" x="167.64" y="144.78" smashed="yes" rot="R270">
 <attribute name="NAME" x="165.1" y="150.622" size="1.27" layer="95"/>
 </instance>
 <instance part="U$8" gate="G$1" x="160.02" y="139.7" smashed="yes"/>
 <instance part="U$9" gate="G$1" x="157.48" y="157.734" smashed="yes"/>
-<instance part="BAT_IN" gate="G$1" x="20.146" y="155.448" smashed="yes">
+<instance part="+BAT_IN--" gate="G$1" x="20.146" y="155.448" smashed="yes">
 <attribute name="NAME" x="27.004" y="152.908" size="1.27" layer="95" rot="R90"/>
 </instance>
 <instance part="U$10" gate="G$1" x="25.4" y="136.398" smashed="yes"/>
@@ -2682,13 +2670,13 @@ Architecture) Research Group</text>
 <attribute name="NAME" x="149.14" y="156.59" size="1.27" layer="95"/>
 <attribute name="VALUE" x="149.54" y="152.138" size="1.27" layer="96"/>
 </instance>
-<instance part="C9" gate="G$1" x="238.744" y="91.964" smashed="yes" rot="R270">
-<attribute name="NAME" x="235.696" y="93.996" size="1.27" layer="95"/>
-<attribute name="VALUE" x="234.934" y="88.408" size="1.27" layer="96"/>
+<instance part="C9" gate="G$1" x="238.764" y="91.256" smashed="yes" rot="R180">
+<attribute name="NAME" x="240.696" y="92.796" size="1.27" layer="95"/>
+<attribute name="VALUE" x="240.534" y="88.108" size="1.27" layer="96"/>
 </instance>
-<instance part="C10" gate="G$1" x="238.18" y="141.564" smashed="yes" rot="R270">
-<attribute name="NAME" x="235.132" y="143.596" size="1.27" layer="95"/>
-<attribute name="VALUE" x="234.37" y="138.008" size="1.27" layer="96"/>
+<instance part="C10" gate="G$1" x="238.164" y="141.42" smashed="yes" rot="R180">
+<attribute name="NAME" x="239.532" y="144.196" size="1.27" layer="95"/>
+<attribute name="VALUE" x="239.77" y="138.608" size="1.27" layer="96"/>
 </instance>
 <instance part="B1" gate="G$1" x="32" y="15" smashed="yes">
 <attribute name="NAME" x="29.46" y="20.08" size="1.778" layer="95" font="vector"/>
@@ -2701,10 +2689,10 @@ Architecture) Research Group</text>
 <instance part="U$7" gate="G$1" x="211.074" y="43.18" smashed="yes" rot="R270"/>
 <instance part="U$24" gate="G$1" x="211.074" y="45.72" smashed="yes" rot="R270"/>
 <instance part="U$25" gate="G$1" x="211.074" y="48.26" smashed="yes" rot="R270"/>
-<instance part="3V3_OUT" gate="G$1" x="134.62" y="50.8" smashed="yes">
+<instance part="--3V3_OUT+" gate="G$1" x="134.62" y="50.8" smashed="yes">
 <attribute name="NAME" x="129.54" y="56.642" size="1.27" layer="95"/>
 </instance>
-<instance part="5V_OUT" gate="G$1" x="160.02" y="50.8" smashed="yes">
+<instance part="--5V_OUT+" gate="G$1" x="160.02" y="50.8" smashed="yes">
 <attribute name="NAME" x="154.94" y="56.642" size="1.27" layer="95"/>
 </instance>
 <instance part="U$26" gate="G$1" x="157.48" y="35.814" smashed="yes"/>
@@ -2754,6 +2742,12 @@ Architecture) Research Group</text>
 <instance part="D1" gate="G$1" x="157.48" y="152.4" smashed="yes" rot="R90">
 <attribute name="NAME" x="155.702" y="151.892" size="0.8128" layer="95" rot="R180"/>
 <attribute name="VALUE" x="156.718" y="148.844" size="0.8128" layer="96" rot="R180"/>
+</instance>
+<instance part="FID3" gate="G$1" x="96.52" y="12.7" smashed="yes">
+<attribute name="NAME" x="93.472" y="18.288" size="1.27" layer="95"/>
+</instance>
+<instance part="FID4" gate="G$1" x="109.22" y="12.7" smashed="yes">
+<attribute name="NAME" x="106.172" y="18.288" size="1.27" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -2817,7 +2811,7 @@ Architecture) Research Group</text>
 <junction x="60.96" y="83.566"/>
 </segment>
 <segment>
-<pinref part="PV_IN" gate="G$1" pin="GND"/>
+<pinref part="+PV_IN--" gate="G$1" pin="GND"/>
 <pinref part="U1" gate="G$1" pin="VSS@1"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="160.02" y1="142.24" x2="160.02" y2="139.7" width="0.1524" layer="91"/>
@@ -2839,26 +2833,26 @@ Architecture) Research Group</text>
 <wire x1="220.98" y1="83.82" x2="220.98" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="220.98" y1="83.82" x2="238.744" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="238.744" y1="83.82" x2="238.744" y2="88.662" width="0.1524" layer="91"/>
+<wire x1="238.744" y1="83.82" x2="238.764" y2="89.478" width="0.1524" layer="91"/>
 <junction x="220.98" y="83.82"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND"/>
 <wire x1="220.4" y1="132.42" x2="220.4" y2="129.88" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="1"/>
-<wire x1="238.18" y1="138.262" x2="238.18" y2="132.42" width="0.1524" layer="91"/>
+<wire x1="238.164" y1="139.642" x2="238.18" y2="132.42" width="0.1524" layer="91"/>
 <wire x1="238.18" y1="132.42" x2="220.4" y2="132.42" width="0.1524" layer="91"/>
 <junction x="220.4" y="132.42"/>
 </segment>
 <segment>
-<pinref part="3V3_OUT" gate="G$1" pin="GND"/>
+<pinref part="--3V3_OUT+" gate="G$1" pin="GND"/>
 <wire x1="137.16" y1="43.18" x2="137.16" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="40.64" x2="162.56" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="5V_OUT" gate="G$1" pin="GND"/>
+<pinref part="--5V_OUT+" gate="G$1" pin="GND"/>
 <wire x1="162.56" y1="40.64" x2="162.56" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="BAT_IN" gate="G$1" pin="GND"/>
+<pinref part="+BAT_IN--" gate="G$1" pin="GND"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="22.686" y1="147.828" x2="25.4" y2="147.828" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="147.828" x2="38.1" y2="147.828" width="0.1524" layer="91"/>
@@ -2869,15 +2863,18 @@ Architecture) Research Group</text>
 <wire x1="52.302" y1="148.018" x2="45.224" y2="148.018" width="0.1524" layer="91"/>
 <wire x1="45.224" y1="148.018" x2="45.224" y2="148.176" width="0.1524" layer="91"/>
 <junction x="45.224" y="148.176"/>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="48.006" y1="136.398" x2="25.4" y2="136.398" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="136.398" x2="25.4" y2="147.828" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="136.398" x2="25.4" y2="137.16" width="0.1524" layer="91"/>
 <junction x="25.4" y="147.828"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <junction x="52.302" y="148.018"/>
 <pinref part="TP2" gate="G$1" pin="TP"/>
+<wire x1="25.4" y1="137.16" x2="25.4" y2="147.828" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="147.828" x2="38.1" y2="149.86" width="0.1524" layer="91"/>
 <junction x="38.1" y="147.828"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="47.244" y1="139.446" x2="47.244" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="47.244" y1="137.16" x2="25.4" y2="137.16" width="0.1524" layer="91"/>
+<junction x="25.4" y="137.16"/>
 </segment>
 </net>
 <net name="VIN_BAT" class="0">
@@ -2886,13 +2883,13 @@ Architecture) Research Group</text>
 <wire x1="63.5" y1="139.7" x2="55.88" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="139.7" x2="55.88" y2="143.002" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="55.88" y1="143.002" x2="48.006" y2="143.002" width="0.1524" layer="91"/>
-<pinref part="BAT_IN" gate="G$1" pin="VIN"/>
-<wire x1="48.006" y1="143.002" x2="33.02" y2="143.002" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="143.002" x2="47.244" y2="143.002" width="0.1524" layer="91"/>
+<pinref part="+BAT_IN--" gate="G$1" pin="VIN"/>
+<wire x1="47.244" y1="143.002" x2="33.02" y2="143.002" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="143.002" x2="18.034" y2="143.002" width="0.1524" layer="91"/>
 <wire x1="18.034" y1="143.002" x2="17.606" y2="143.002" width="0.1524" layer="91"/>
 <wire x1="17.606" y1="143.002" x2="17.606" y2="147.828" width="0.1524" layer="91"/>
-<junction x="48.006" y="143.002"/>
+<junction x="47.244" y="143.002"/>
 <wire x1="33.02" y1="143.002" x2="33.02" y2="157.48" width="0.1524" layer="91"/>
 <label x="27.94" y="160.274" size="1.778" layer="95"/>
 <pinref part="TP3" gate="G$1" pin="TP"/>
@@ -2972,12 +2969,12 @@ Architecture) Research Group</text>
 <label x="240.26" y="155.72" size="1.778" layer="95"/>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="238.18" y1="150.2" x2="243.26" y2="150.2" width="0.1524" layer="91"/>
-<wire x1="238.18" y1="150.2" x2="238.18" y2="144.866" width="0.1524" layer="91"/>
+<wire x1="238.18" y1="150.2" x2="238.164" y2="143.198" width="0.1524" layer="91"/>
 <junction x="238.18" y="150.2"/>
 <wire x1="243.26" y1="150.2" x2="243.26" y2="152.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="5V_OUT" gate="G$1" pin="VIN"/>
+<pinref part="--5V_OUT+" gate="G$1" pin="VIN"/>
 <wire x1="157.48" y1="43.18" x2="157.48" y2="38.1" width="0.1524" layer="91"/>
 <label x="154.94" y="33.02" size="1.778" layer="95"/>
 <pinref part="TP6" gate="G$1" pin="TP"/>
@@ -2992,13 +2989,13 @@ Architecture) Research Group</text>
 <label x="238.9" y="106.9" size="1.778" layer="95"/>
 <pinref part="C9" gate="G$1" pin="2"/>
 <wire x1="238.76" y1="101.6" x2="238.76" y2="96.266" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="96.266" x2="238.744" y2="95.266" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="96.266" x2="238.764" y2="93.034" width="0.1524" layer="91"/>
 <junction x="238.76" y="101.6"/>
 <wire x1="238.76" y1="101.6" x2="243.84" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="101.6" x2="243.84" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="3V3_OUT" gate="G$1" pin="VIN"/>
+<pinref part="--3V3_OUT+" gate="G$1" pin="VIN"/>
 <wire x1="132.08" y1="43.18" x2="132.08" y2="38.1" width="0.1524" layer="91"/>
 <label x="127" y="33.02" size="1.778" layer="95"/>
 <pinref part="TP5" gate="G$1" pin="TP"/>
@@ -3104,7 +3101,7 @@ Architecture) Research Group</text>
 <net name="N$7" class="0">
 <segment>
 <pinref part="D1" gate="G$1" pin="2"/>
-<pinref part="PV_IN" gate="G$1" pin="VIN"/>
+<pinref part="+PV_IN--" gate="G$1" pin="VIN"/>
 <wire x1="157.48" y1="147.32" x2="160.02" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>

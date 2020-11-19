@@ -1,4 +1,10 @@
 <h2>Solar Harvester v1.0_m1</h2>
-Rev 0 <br>
-Rev 1 <br>
-Components with 0603 metric footprint were substituted by 0603 imperial
+<b> Rev 0 </b> <br>
+<b> Rev 1 </b> <br>
+Components with 0603 metric footprint were substituted by 0603 imperial <br>
+<b> Rev 2 </b> <br>
+Board size increased to 30x55 <br>
+Changed C3 footprint to 3528, C4 and C11 to 1608 <br>
+Changed C9 and C10 to 100u 3528 <br>
+Rewired PCB <br>
+Components font size increased to 32mil <br>
